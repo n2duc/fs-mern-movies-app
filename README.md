@@ -6,13 +6,13 @@ Movie app full stack (MERN Stack) using React, Redux, MUI5, MongoDauBuoi, ...
 
 App uses a number of open source projects to work properly:
 
-- [node.js] - For the backend
-- [Express] - Fast node.js network app framework
-- [ReactJS] - Frontend Framework
-- [ReduxToolkit] - State Management
-- [MaterialUI] - Build UI
-- [MongoDB] - Database saving
-- [Yup/Fomik] - Validate form
+- [Node.js](https://nodejs.org/en) - For the backend
+- [Express](https://expressjs.com/) - Fast node.js network app framework
+- [ReactJS](https://react.dev) - Frontend Framework
+- [ReduxToolkit](https://redux-toolkit.js.org/) - State Management
+- [MaterialUI](https://mui.com/material-ui/) - Build UI
+- [MongoDB](https://www.mongodb.com/) - Database saving
+- [Yup/Fomik](https://formik.org/) - Validation form
 
 ## Features
 
@@ -38,7 +38,7 @@ MovieApp requires install [Node.js](https://nodejs.org/) to run ( >= ver 18).
 
 ### Server
 ```sh
-cd dillinger
+cd server
 npm i
 npm start
 ```
