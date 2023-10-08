@@ -34,10 +34,9 @@ const userApi = {
     getInfo: async () => {
         try {
             const response = await privateClient.get(userEndpoints.getInfo);
+    
             return { response };
-        } catch (error) {
-            return { error };
-        }
+        } catch (err) { return { err }; }
     },
     passwordUpdate: async ({ password, newPassword, confirmNewPassword }) => {
         try {

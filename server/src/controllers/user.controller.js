@@ -66,6 +66,7 @@ const updatePassword = async (req, res) => {
         const { password, newPassword } = req.body;
 
         const user = await userModel.findById(req.user.id).select("password is salt");
+        
         if (!user) return responseHandller.unauthorize(res);
         if (!user.validPassword(password)) return responseHandller.badrequest(res, "Wrong password");
 
@@ -82,7 +83,7 @@ const getInfo = async (req, res) => {
     try {
         const user = await userModel.findById(req.user.id);
         if (!user) return responseHandller.notfound(res);
-
+        
         responseHandller.oke(res, user);
     } catch {
         responseHandller.error(res);
