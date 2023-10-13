@@ -30,8 +30,7 @@ router.post(
         .isLength({ min: 8 })
         .withMessage("confirmPassword minium 8 characters")
         .custom((value, { req }) => {
-            if (value !== req.body.password)
-                throw new Error("confirmPassword not match");
+            if (value !== req.body.password) throw new Error("confirmPassword not match");
             return true;
         }),
     body("displayName")
@@ -96,14 +95,14 @@ router.get(
     "/favorites",
     tokenMiddleware.auth,
     favoriteController.getFavoritesOfUser
-)
+);
 
 router.get(
     "/favorites",
     tokenMiddleware.auth,
-    body("mediatype")
+    body("mediaType")
         .exists()
-        .withMessage("mediatype is required")
+        .withMessage("mediaType is required")
         .custom(type => ["movie", "tv"].includes(type)).withMessage("mediaType invalid"),
     body("mediaId")
         .exists()

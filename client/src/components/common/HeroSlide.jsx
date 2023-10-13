@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
 import { toast } from "react-toastify";
 
 import { setGlobalLoading } from "../../redux/features/globalLoadingSlice";
@@ -72,6 +73,7 @@ const HeroSlide = ({ mediaType, mediaCategory }) => {
                 grabCursor={true}
                 loop={true}
                 style={{ width: "100%", height: "max-content" }}
+                modules={[Autoplay]}
                 autoplay={{
                     delay: 3000,
                     disableOnInteraction: false
